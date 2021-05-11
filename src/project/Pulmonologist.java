@@ -17,6 +17,8 @@ public class Pulmonologist extends Doctor
         return bestTreatment;
     }
 
+
+
     public void setBestTreatment(String bestTreatment)
     {
         this.bestTreatment = bestTreatment;
