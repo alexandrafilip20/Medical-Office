@@ -3,6 +3,7 @@ package project;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.regex.Pattern;
 
 public class DoctorOffice
 {
@@ -112,12 +113,16 @@ public class DoctorOffice
         System.out.println("Introduceti numarul de afectiuni :");
         int n = scanner.nextInt();
         System.out.println("Introduceti afectiuni :");
-        String[] diseases = new String[n];
-        for(int i = 0 ;i < n; i++)
-        {
-            String d = scanner.next();
-            diseases[i] = d;
-        }
+        scanner.nextLine();
+        String d = scanner.nextLine();
+        String[] diseases = d.split(",");
+
+//        String[] parts = );
+//        for(int i = 0 ;i < n; i++)
+//        {
+//            //String d = scanner.next();
+//            diseases[i] = parts[i];
+//        }
 
         if(age < 18)
         {
@@ -235,14 +240,14 @@ public class DoctorOffice
         if(part.toLowerCase().charAt(0) == 'i')
         {
             System.out.println("Introduceti recomandarea doctorului: ");
-            String recommendation = scanner.next();
+            String recommendation = scanner.nextLine();
             Cardiologist c = new Cardiologist(lastName, firstName, age, qualification, part, surgeon, new PriorityQueue<>(), recommendation);
             doctors.add(c);
         }
         else if(part.startsWith("pla"))
         {
             System.out.println("Introduceti tratamentul doctorului: ");
-            String treatment = scanner.next();
+            String treatment = scanner.nextLine();
             Pulmonologist p = new Pulmonologist(lastName, firstName, age, qualification, part, surgeon, new PriorityQueue<>(), treatment);
             doctors.add(p);
         }

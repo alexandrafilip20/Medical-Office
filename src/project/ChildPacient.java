@@ -33,6 +33,4 @@ public class ChildPacient extends Pacient
     {
         return true;
     }
-
-
 }
