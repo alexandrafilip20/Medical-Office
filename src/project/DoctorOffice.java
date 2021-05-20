@@ -1,5 +1,6 @@
 package project;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -10,6 +11,8 @@ public class DoctorOffice
     private ArrayList<Appointment> appointments = new ArrayList<>();
     private ArrayList<Pacient> pacients = new ArrayList<>();
     private ArrayList<Doctor> doctors = new ArrayList<>();
+
+    private AuditService as = AuditService.getInstance();
 
     public DoctorOffice () {};
 
@@ -88,6 +91,7 @@ public class DoctorOffice
     {
         for(Pacient p: pacients)
             System.out.println(p.toString());
+        as.addAudit("print pacients");
     }
 
     public void printChildPacients ()
@@ -95,6 +99,7 @@ public class DoctorOffice
         for(Pacient p: pacients)
             if(p.isUnderAge())
                 System.out.println(p.toString());
+        as.addAudit("print child pacients");
     }
 
     public void addPacient()
@@ -134,10 +139,12 @@ public class DoctorOffice
         else
         {
             System.out.println("Intrduceti daca fumeaza sau nu : (true or false) ");
-            Boolean smoker = scanner.nextBoolean();
+            boolean smoker = scanner.nextBoolean();
             AdultPacient p = new AdultPacient(lastName, firstName, age, sex, diseases, new ArrayList<>(), smoker);
             pacients.add(p);
         }
+
+        as.addAudit("add pacient");
     }
 
     private String[] addElement (String[] s, String d)

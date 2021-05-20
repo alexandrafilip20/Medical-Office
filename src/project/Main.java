@@ -9,8 +9,10 @@ public class Main
 {
     public static void main(String[] args) throws ParseException
     {
-        ReaderWriter readerWriter = new ReaderWriter();
+        ReaderWriter readerWriter = ReaderWriter.getInstance();
         DoctorOffice doctorOffice = new DoctorOffice();
+        AuditService auditService = AuditService.getInstance();
+        auditService.setActions("");
 
         readerWriter.readChild(doctorOffice);
         readerWriter.readAdult(doctorOffice);
@@ -90,6 +92,7 @@ public class Main
                     readerWriter.writeAdultPacient(doctorOffice);
                     readerWriter.writeDoctor(doctorOffice);
                     readerWriter.writeAppointment(doctorOffice);
+                    auditService.writeAudit();
                 }
                 default: {
                     System.out.println("Introduceti o optiune valida\n");
@@ -100,6 +103,7 @@ public class Main
             readerWriter.writeAdultPacient(doctorOffice);
             readerWriter.writeDoctor(doctorOffice);
             readerWriter.writeAppointment(doctorOffice);
+            auditService.writeAudit();
         }
 
 
