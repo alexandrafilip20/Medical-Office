@@ -11,16 +11,16 @@ public abstract class Pacient
     private char sex;
     protected String[] diseases;
 
-    private ArrayList<Appointment> appointments;
+    //private ArrayList<Appointment> appointments;
 
-    public Pacient(String lastName, String firstName, int age, char sex, String[] diseases, ArrayList<Appointment> appointments)
+    public Pacient(String lastName, String firstName, int age, char sex, String[] diseases)
     {
         this.lastName = lastName;
         this.firstName = firstName;
         this.age = age;
         this.sex = sex;
         this.diseases = diseases;
-        this.appointments = appointments;
+        //this.appointments = appointments;
     }
 
     public String getFirstName() {
@@ -64,26 +64,26 @@ public abstract class Pacient
         this.diseases = diseases;
     }
 
-    public ArrayList<Appointment> getAppointments()
-    {
-        return appointments;
-    }
+//    public ArrayList<Appointment> getAppointments()
+//    {
+//        return appointments;
+//    }
+//
+//    public void setAppointments(ArrayList<Appointment> appointments)
+//    {
+//        this.appointments = appointments;
+//    }
 
-    public void setAppointments(ArrayList<Appointment> appointments)
-    {
-        this.appointments = appointments;
-    }
-
-    @Override
-    public String toString()
-    {
-        if(sex == 'M')
-            return "Pacient " + lastName + " " + firstName + ", varsta " + age + ", sex Masculin" + ", afectiuni : " + Arrays.toString(diseases) + ", cu urmatoarele programari :\n"
-                  + appointments;
-        else
-            return "Pacienta " + lastName + " " + firstName + ", varsta " + age + ", sex Feminin" + ", afectiuni : " + Arrays.toString(diseases) + ", cu urmatoarele programari :\n"
-                + appointments;
-    }
+//    @Override
+//    public String toString()
+//    {
+//        if(sex == 'M')
+//            return "Pacient " + lastName + " " + firstName + ", varsta " + age + ", sex Masculin" + ", afectiuni : " + Arrays.toString(diseases) + ", cu urmatoarele programari :\n"
+//                  + appointments;
+//        else
+//            return "Pacienta " + lastName + " " + firstName + ", varsta " + age + ", sex Feminin" + ", afectiuni : " + Arrays.toString(diseases) + ", cu urmatoarele programari :\n"
+//                + appointments;
+//    }
 
     public abstract boolean isUnderAge();
 }

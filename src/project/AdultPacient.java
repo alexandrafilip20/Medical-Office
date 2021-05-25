@@ -6,9 +6,9 @@ public class AdultPacient extends Pacient
 {
     private boolean smoker;
 
-    public AdultPacient(String firstName, String lastName, int age, char sex, String[] diseases, ArrayList<Appointment> appointments, boolean smoker)
+    public AdultPacient(String firstName, String lastName, int age, char sex, String[] diseases, boolean smoker)
     {
-        super(firstName, lastName, age, sex, diseases, appointments);
+        super(firstName, lastName, age, sex, diseases);
         this.smoker = smoker;
     }
 

@@ -6,9 +6,9 @@ public class Pulmonologist extends Doctor
 {
     private String bestTreatment;
 
-    public Pulmonologist(String firstName, String lastName, int age, String qualification, String bodyPart, boolean isSurgeon, PriorityQueue<Appointment> appointmentsPQ, String bestTreatment)
+    public Pulmonologist(String firstName, String lastName, int age, String qualification, String bodyPart, boolean isSurgeon, String bestTreatment)
     {
-        super(firstName, lastName, age, qualification, bodyPart, isSurgeon, appointmentsPQ);
+        super(firstName, lastName, age, qualification, bodyPart, isSurgeon);
         this.bestTreatment = bestTreatment;
     }
 
@@ -16,8 +16,6 @@ public class Pulmonologist extends Doctor
     {
         return bestTreatment;
     }
-
-
 
     public void setBestTreatment(String bestTreatment)
     {

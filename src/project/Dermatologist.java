@@ -6,9 +6,9 @@ public class Dermatologist extends Doctor
 {
     private int treatedCases;
 
-    public Dermatologist(String firstName, String lastName, int age, String qualification, String bodyPart, boolean isSurgeon, PriorityQueue<Appointment> appointmentsPQ, int treatedCases)
+    public Dermatologist(String firstName, String lastName, int age, String qualification, String bodyPart, boolean isSurgeon, int treatedCases)
     {
-        super(firstName, lastName, age, qualification, bodyPart, isSurgeon, appointmentsPQ);
+        super(firstName, lastName, age, qualification, bodyPart, isSurgeon);
         this.treatedCases = treatedCases;
     }
 

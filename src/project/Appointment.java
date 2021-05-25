@@ -12,11 +12,12 @@ public class Appointment implements Comparable<Appointment>
     private String doctorFirstName;
 
     private int hour;
-    private Date date;
+    private String date;
     private String reason;
     private double price;
 
-    public Appointment(String pacientLastName, String pacientFirstName, String doctorLastName, String doctorFirstName, int hour, Date date,String reason, double price) {
+    public Appointment(String pacientLastName, String pacientFirstName, String doctorLastName, String doctorFirstName, int hour, String date,String reason, double price)
+    {
         this.pacientLastName = pacientLastName;
         this.pacientFirstName = pacientFirstName;
         this.doctorLastName = doctorLastName;
@@ -77,12 +78,12 @@ public class Appointment implements Comparable<Appointment>
         this.hour = hour;
     }
 
-    public Date getDate()
+    public String getDate()
     {
         return date;
     }
 
-    public void setDate(Date date)
+    public void setDate(String date)
     {
         this.date = date;
     }

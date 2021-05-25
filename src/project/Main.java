@@ -1,5 +1,10 @@
 package project;
 
+import project.repository.AppointmentRepository;
+import project.repository.DoctorRepository;
+import project.repository.PacientRepository;
+
+import javax.print.Doc;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -9,15 +14,50 @@ public class Main
 {
     public static void main(String[] args) throws ParseException
     {
-        ReaderWriter readerWriter = ReaderWriter.getInstance();
-        DoctorOffice doctorOffice = new DoctorOffice();
-        AuditService auditService = AuditService.getInstance();
-        auditService.setActions("");
 
-        readerWriter.readChild(doctorOffice);
-        readerWriter.readAdult(doctorOffice);
-        readerWriter.readDoctor(doctorOffice);
-        readerWriter.readAppointment(doctorOffice);
+        DoctorOffice doctorOffice = new DoctorOffice();
+
+//        AppointmentRepository appointmentRepository = new AppointmentRepository();
+//        DoctorRepository doctorRepository = new DoctorRepository();
+//        PacientRepository pacientRepository = new PacientRepository();
+
+
+//        ReaderWriter readerWriter = ReaderWriter.getInstance();
+
+//        AuditService auditService = AuditService.getInstance();
+//        auditService.setActions("");
+
+//          readerWriter.readChild(doctorOffice);
+//          readerWriter.readAdult(doctorOffice);
+//        readerWriter.readDoctor(doctorOffice);
+//        readerWriter.readAppointment(doctorOffice);
+//
+//        appointmentRepository.createTable();
+//        doctorRepository.createTable();
+//        pacientRepository.createTable();
+
+
+//        for(Appointment a : doctorOffice.getAppointments())
+//            appointmentRepository.insertAppointment(a);
+//
+//        for(Pacient p : doctorOffice.getPacients())
+//            pacientRepository.insertPacient(p);
+//
+//        for(Doctor d : doctorOffice.getDoctors())
+//            doctorRepository.insertDoctor(d);
+
+//        for(Appointment a : doctorOffice.getAppointments())
+//             appointmentRepository.deleteAppointment(a.getPacientLastName(),a.getPacientFirstName(),a.getDoctorLastName(),a.getPacientFirstName(),a.getDate());
+
+//        for(int i=16;i<=19;i++)
+//            pacientRepository.deletePacientById(i);
+
+
+
+//        appointmentRepository.displayAppointments();
+//        pacientRepository.displayPacients();
+//        doctorRepository.displayDoctors();
+
 
         //readerWriter.writeChildPacient(doctorOffice);
         //AdultPacient p1 = new AdultPacient("Popescu", "Darius", 29, 'M', new String[]{"diabet", "insuficienta cardiaca"}, new ArrayList<>(), false);
@@ -60,7 +100,7 @@ public class Main
 
 //        System.out.println("Bine ati venit in cabinetul nostru medical");
 
-
+//
         while(true) {
             System.out.println("\n1: Operatii asupra medicilor");
             System.out.println("2: Operatii asupra pacientilor");
@@ -88,22 +128,22 @@ public class Main
 
                 case 4: {
                     System.exit(0);
-                    readerWriter.writeChildPacient(doctorOffice);
-                    readerWriter.writeAdultPacient(doctorOffice);
-                    readerWriter.writeDoctor(doctorOffice);
-                    readerWriter.writeAppointment(doctorOffice);
-                    auditService.writeAudit();
+//                    readerWriter.writeChildPacient(doctorOffice);
+//                    readerWriter.writeAdultPacient(doctorOffice);
+//                    readerWriter.writeDoctor(doctorOffice);
+//                    readerWriter.writeAppointment(doctorOffice);
+//                    auditService.writeAudit();
                 }
                 default: {
                     System.out.println("Introduceti o optiune valida\n");
                 }
             }
 
-            readerWriter.writeChildPacient(doctorOffice);
-            readerWriter.writeAdultPacient(doctorOffice);
-            readerWriter.writeDoctor(doctorOffice);
-            readerWriter.writeAppointment(doctorOffice);
-            auditService.writeAudit();
+//            readerWriter.writeChildPacient(doctorOffice);
+//            readerWriter.writeAdultPacient(doctorOffice);
+//            readerWriter.writeDoctor(doctorOffice);
+//            readerWriter.writeAppointment(doctorOffice);
+//            auditService.writeAudit();
         }
 
 

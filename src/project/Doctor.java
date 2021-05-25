@@ -10,9 +10,9 @@ public class Doctor
     private String qualification;
     private String bodyPart;
     private boolean isSurgeon;
-    private PriorityQueue<Appointment> appointmentsPQ;
+    //private PriorityQueue<Appointment> appointmentsPQ;
 
-    public Doctor(String lastName, String firstName, int age, String qualification, String bodyPart, boolean isSurgeon, PriorityQueue<Appointment> appointmentsPQ)
+    public Doctor(String lastName, String firstName, int age, String qualification, String bodyPart, boolean isSurgeon)
     {
         this.lastName = lastName;
         this.firstName = firstName;
@@ -20,7 +20,7 @@ public class Doctor
         this.qualification = qualification;
         this.bodyPart = bodyPart;
         this.isSurgeon = isSurgeon;
-        this.appointmentsPQ = appointmentsPQ;
+        //this.appointmentsPQ = appointmentsPQ;
     }
 
     public String getFirstName()
@@ -83,32 +83,32 @@ public class Doctor
         isSurgeon = surgeon;
     }
 
-    public PriorityQueue<Appointment> getAppointmentsPQ()
-    {
-        return appointmentsPQ;
-    }
+//    public PriorityQueue<Appointment> getAppointmentsPQ()
+//    {
+//        return appointmentsPQ;
+//    }
+//
+//    public void setAppointmentsPQ(PriorityQueue<Appointment> appointmentsPQ)
+//    {
+//        this.appointmentsPQ = appointmentsPQ;
+//    }
 
-    public void setAppointmentsPQ(PriorityQueue<Appointment> appointmentsPQ)
-    {
-        this.appointmentsPQ = appointmentsPQ;
-    }
-
-    @Override
-    public String toString()
-    {
-        if(!appointmentsPQ.isEmpty())
-        {
-            if(isSurgeon)
-                 return lastName + " " + firstName + ", in varsta de " + age + ", medic " + qualification + ", chirurg" + ", cu urmatoarele programari :\n" + appointmentsPQ;
-            else
-                return lastName + " " + firstName + ", in varsta de " + age + ", medic " + qualification + ", nu este chirurg" + ", cu urmatoarele programari :\n" + appointmentsPQ;
-        }
-        else
-        {
-            if(isSurgeon)
-                return lastName + " " + firstName + ", in varsta de " + age + ", medic " + qualification + ", chirurg" + ", fara programari";
-            else
-                return lastName + " " + firstName + ", in varsta de " + age + ", medic " + qualification + ", nu este chirurg" + ", fara programari";
-        }
-    }
+//    @Override
+//    public String toString()
+//    {
+//        if(!appointmentsPQ.isEmpty())
+//        {
+//            if(isSurgeon)
+//                 return lastName + " " + firstName + ", in varsta de " + age + ", medic " + qualification + ", chirurg" + ", cu urmatoarele programari :\n" + appointmentsPQ;
+//            else
+//                return lastName + " " + firstName + ", in varsta de " + age + ", medic " + qualification + ", nu este chirurg" + ", cu urmatoarele programari :\n" + appointmentsPQ;
+//        }
+//        else
+//        {
+//            if(isSurgeon)
+//                return lastName + " " + firstName + ", in varsta de " + age + ", medic " + qualification + ", chirurg" + ", fara programari";
+//            else
+//                return lastName + " " + firstName + ", in varsta de " + age + ", medic " + qualification + ", nu este chirurg" + ", fara programari";
+//        }
+//    }
 }

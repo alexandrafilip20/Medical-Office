@@ -6,9 +6,9 @@ public class Cardiologist extends Doctor
 {
     private String recommendation;
 
-    public Cardiologist(String firstName, String lastName, int age, String qualification, String bodyPart, boolean isSurgeon, PriorityQueue<Appointment> appointmentsPQ, String recommendations)
+    public Cardiologist(String firstName, String lastName, int age, String qualification, String bodyPart, boolean isSurgeon, String recommendations)
     {
-        super(firstName, lastName, age, qualification, bodyPart, isSurgeon, appointmentsPQ);
+        super(firstName, lastName, age, qualification, bodyPart, isSurgeon);
         this.recommendation = recommendations;
     }
 

@@ -6,9 +6,9 @@ public class ChildPacient extends Pacient
 {
     private String parentName;
 
-    public ChildPacient(String firstName, String lastName, int age, char sex, String[] diseases, ArrayList<Appointment> appointments, String parentName)
+    public ChildPacient(String firstName, String lastName, int age, char sex, String[] diseases, String parentName)
     {
-        super(firstName, lastName, age, sex, diseases, appointments);
+        super(firstName, lastName, age, sex, diseases);
         this.parentName = parentName;
     }
 
